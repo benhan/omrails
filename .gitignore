@@ -14,10 +14,15 @@
 /log/*.log
 /tmp
 
-*Ignore all the user set files*
+# Ignore all the user set files
 doc/
 *.swp
 *~
 .project
 .DS_Store
 .idea
+
+#Ignore Paperclip uploaded files
+/public/system
+
+
