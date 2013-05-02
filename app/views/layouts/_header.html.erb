@@ -10,7 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <%= link_to "One Month Rails", root_path, class: "brand" %>
+      <%= link_to "Demo Application", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -21,8 +21,14 @@
       	</ul>
         <ul class="nav pull-right">
           <% if user_signed_in? %>
-            <li><%= link_to "Add +", new_pin_path %>
-            <li><%= link_to "Edit Profile", edit_user_registration_path %>
+            <li><%= link_to "Add Pin +", new_pin_path %></li>
+            <li id="profpic">
+              <%= link_to(current_user) do %>
+                <%= image_tag current_user.image(:tiny) %>
+                <%= current_user.name %>
+              <% end %>
+            </li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "Login", new_user_session_path %></li>
