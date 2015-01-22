@@ -2,3 +2,5 @@
 
 This is the sample application for
 [*One Rails: Teach Yourself to Code*](http://onemonthrails.com)
+
+Check out some of my other work through my profile, indisbensable.
